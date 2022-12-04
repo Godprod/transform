@@ -1,0 +1,472 @@
+@import url(resret.css);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+html, body {
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  line-height: 26px;
+  position: relative;
+}
+a {
+  text-decoration: none;
+  color: #d4dde1;
+}
+.header a {
+  text-transform: uppercase;
+}
+
+.flex-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+  background-color: rgb(2, 5, 9);
+  padding: 35px 0;
+}
+.container_head {
+  width: 1320px;
+  margin: 0 auto;
+  padding: 0 10px;
+  position: relative;
+}
+.logo {
+  position: absolute;
+  letter-spacing: 8px;
+  z-index: 2;
+  overflow: hidden
+}
+
+.block-list {
+  display: flex;
+  justify-content: center;
+}
+
+.block-list > li > a.active,
+.block-list > li > a.active .icon,
+.block-list  li  a:hover,
+.block-list  li  a:hover .icon,
+.icon:hover {
+  color: rgba(255, 0, 56, 1);
+  fill: rgba(255, 0, 56, 1);
+}
+/* .block-list  li  a:hover {
+  color: rgba(255, 0, 56, 1);
+  fill: rgba(255, 0, 56, 1);
+}
+
+.icon:hover{
+fill: rgba(255, 0, 56, 1);
+} */
+
+.icon {
+	width: 40px;
+	height: 40px;
+	fill: rgb(255, 255, 255);
+  transition-duration: 1s;
+}
+
+.mleft {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 32px;
+  height: 32px;
+}
+
+.block-list  li {
+  position: relative;
+}
+
+.block-list a {
+  transition-duration: 1s;
+  position: relative;
+}
+
+.second_ul {
+	position: absolute;
+	top: -300%;
+  overflow: hidden;
+  width: 0;
+  background: rgb(2, 5, 9, 0.7);
+  transition: top 0.3s cubic-bezier(0,.05,1,.52);
+	/* display: none; */
+  /* width: 101px; */
+  z-index: 2;
+}
+
+.second_ul > li {
+  width: 100%;
+}
+
+.second_ul > li > a {
+  display: flex;
+  justify-content: center;
+  padding: 5px 45px;
+}
+
+.second_ul > li {
+	/* background: rgba(0, 0, 0, 0.7); */
+	white-space: nowrap;
+  /* border: 0.1px solid rgba(75, 75, 75, 0.5); */
+  /* padding: 5px; */
+}
+
+.second_ul::before > li {
+  position: absolute;
+  content: '';
+  border-top: 2px solid #fff;
+}
+
+.main_ul > li:hover .second_ul {
+	/* display: block; */
+  top: 100%;
+  width: 100%;
+  left: 0;
+  overflow: visible;
+}
+
+.third_ul {
+	position: absolute;
+  top: 0%;
+  right: 100%;
+  overflow: hidden;
+  width: 0;
+  background: rgb(2, 5, 9, 0.7);
+  transition: width .3s ease-in;
+}
+
+.second_ul > li:hover .third_ul {
+  right: 100%;
+  width: 100%;
+}
+
+.third_ul > li > a {
+  display: flex;
+  justify-content: center;
+}
+
+.third_ul > li {
+	/* background: rgba(0, 0, 0, 0.7); */
+	white-space: nowrap;
+    padding: 5px 45px;
+  }
+  
+  
+  /* border: 0.1px solid rgba(75, 75, 75, 0.5); */
+  /* padding: 5px; */
+
+
+.second_ul > li:hover .third_ul {
+	display: block;
+}
+
+.font_main {
+
+  background-color: rgb(34, 35, 39, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 116px);
+  margin: 0;
+}
+.social_box {
+  display: block;
+  position: relative;
+  padding: 10px 45px;
+}
+.social_box .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.block-list > li:last-child > .social_box > .icon {
+  left: auto;
+  right: 0;
+}
+
+.block-list > li:last-child > .social_box {
+  padding: 10px 45px 10px 0;
+}
+
+.font_main > h1 {
+  font-family: 'Rubik Mono One', sans-serif;
+  font-size: 124px;
+  text-align: center;
+  text-shadow: 10px 10px 30px #2400ff, -10px -10px 30px #7e2bd9;
+  -webkit-text-stroke: 2px #fc78ff;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 12px;
+  cursor: default
+}
+
+
+/* --------------------- 12 LESSON ---------------------- */
+
+.hidden_ul {
+  position: fixed;
+  bottom: 0;
+  right: 100px;
+  padding-bottom: 40px;
+  background-color: rgb(174, 152, 255);
+  transform: translateY(calc(100% - 46px));
+  transition: all .5s linear;
+}
+
+.hidden_ul:hover {
+transform: translate(0);
+}
+
+.hidden_ul h3 {
+  background: pink;
+  padding: 10px 50px;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 50px;
+  cursor: default;
+}
+
+.social_ul {
+  display: flex;
+  /* transition: all 1s cubic-bezier(0,.05,1,.52); */
+  width: 120px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 10px;
+  transform: rotate(-45deg);
+}
+
+.social_ul a {
+  display: block;
+  padding: 5px;
+}
+
+.social_ul a:hover svg {
+fill: rgba(255, 0, 56, 1);
+transform: rotate(calc(3turn + 45deg));
+}
+
+.social_ul li {
+  line-height: 0;
+  border: 2px solid rgb(0, 0, 0);
+  overflow: hidden;
+}
+
+.social_ul li:hover {
+  background: pink;
+}
+
+.social_icon {
+	width: 40px;
+	height: 40px;
+	fill: rgb(255, 255, 255);
+  transition-duration: 1s;
+  transform: rotate(45deg);
+}
+
+
+/* .hidden_ul li  a:hover,
+/* .hidden_ul li  a:hover .social_icon, */
+/* .social_icon:hover {
+  color: rgba(255, 0, 56, 1);
+  fill: rgba(255, 0, 56, 1);
+} */ 
+
+
+/* ----------------------------------------------------------------------> */
+
+
+
+/* sec page
+
+.container_secpage {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgb(255, 241, 112);
+  padding: 10px;
+}
+
+.box {
+  display: inline-block;
+  position: relative;
+  background: aqua;
+}
+
+.box .img {
+  border: 1px solid rgb(132, 0, 255);
+}
+
+.hidden {
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  background: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  display: none;
+  padding: 20px;
+  width: 400px;
+  color: chartreuse;
+  font-size: 20px;
+
+}
+
+.box:hover .hidden {
+  display: block;
+}
+
+.navigation {
+  position: fixed;
+  top: 30%;
+  margin-top: -167px;
+  left: 0%;
+  background-color: rgb(32, 178, 170);
+  border: 2px solid rgb(255, 0, 0);
+}
+
+.navigation > li {
+  padding: 10px;
+  border: 1px solid black;
+  margin: 20px;
+  background-color: rgb(33, 197, 189);
+  scroll-behavior: smooth;
+}
+
+.navigation > li > a {
+  font-size: 20px;
+  color: aliceblue;
+  text-decoration: none;
+}
+
+/* homework */
+
+
+/* CARDS */
+
+.container_cards {
+	width: 1230px;
+	margin: 0 auto;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.parent {
+        padding: 5px 0;
+        font-size: 0;
+background-color: black;
+margin-right: 2.5px
+}
+.child {
+	background: rgb(255, 255, 255);
+    vertical-align: top;
+	display: inline-block;
+	width: 300px;
+	font-size: 20px;
+    margin-right: 2.5px;
+    overflow:hidden;
+
+}
+.parent .child {
+    width: 400px;
+    height: 362px;
+    margin-bottom: 5px;
+}
+.img-menu-pizza {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.h1-pizza, .h2-pizza, .h3-pizza {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.h1-pizza {
+    font-size: 50px;
+}
+.h2-pizza {
+    font-size: 25px;
+}
+.h3-pizza {font-size: 25px;
+}
+.button_card {
+    display: inline-block;
+    width: 100px;
+    cursor: pointer;
+}
+
+/* FLOATS */
+
+.container_float {
+	width: 1200px;
+    margin: 0 auto;
+    background: rgb(165, 165, 165);
+}
+
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.float1 {
+    width: 400px;
+    height: 400px;
+    background-color: rgb(253, 99, 99);
+    outline: 1px solid rgb(0, 0, 255);
+    float: left;
+}
+
+.floatleft {
+    float: left;
+}
+
+.float2 {
+    width: 800px;
+    height: 200px;
+    background-color: cadetblue;
+    outline: 1px solid rgb(0, 0, 255);
+}
+.float3 {
+width: 400px;
+height: 133px;
+background-color: rgb(255, 235, 205);
+outline: 1px solid rgb(0, 0, 255);
+}
+.floatright {
+    float: right;
+}
+.float4 {
+    width: 400px;
+    height: 400px;
+    background-color: chocolate;
+    outline: 1px solid rgb(0, 0, 255);
+    float: left;
+}
+
+.float5 {
+    width: 800px;
+    height: 200px;
+    background-color: rgb(132, 0, 255);
+    outline: 1px solid rgb(0, 0, 255);
+}
+.float6 {
+    width: 400px;
+    height: 200px;
+    background-color: coral;
+    outline: 1px solid rgb(0, 0, 255);
+    float: left;
+}
+.float7 {
+width: 400px;
+height: 100px;
+background-color: lightgreen;
+outline: 1px solid rgb(0, 0, 255);
+}
