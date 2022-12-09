@@ -201,7 +201,7 @@ fill: rgba(255, 0, 56, 1);
   -webkit-text-stroke: 2px #fc78ff;
   -webkit-text-fill-color: transparent;
   letter-spacing: 12px;
-  cursor: default
+  cursor: default;
 }
 
 
@@ -211,28 +211,115 @@ fill: rgba(255, 0, 56, 1);
   position: fixed;
   bottom: 0;
   right: 100px;
-  padding-bottom: 40px;
-  background-color: rgb(174, 152, 255);
   transform: translateY(calc(100% - 46px));
   transition: all .5s linear;
+}
+
+.hidden_head {
+
+  font-size: 32px;
+  font-weight: 800;
+  cursor: default;
+  animation: pulse .5s ease-in-out infinite;
+}
+
+.hidden_ul:hover .hidden_head {
+  animation: none;
 }
 
 .hidden_ul:hover {
 transform: translate(0);
 }
 
-.hidden_ul h3 {
-  background: pink;
-  padding: 10px 50px;
-  font-size: 32px;
-  font-weight: 800;
-  margin-bottom: 50px;
-  cursor: default;
+.hidden_ul:hover h3 {
+  animation-play-state: paused;
 }
+
+.bgwrap {
+  background-color: #fc78ff;
+  padding: 50px 0px;
+}
+
+.hidden_ul h3 {
+  animation: change_bg 2s ease-in infinite alternate ;
+  background: linear-gradient(45deg,#ff2c2c, #2ab1ff,#d400ff);
+  background-size: 200%;
+  padding: 10px 50px;
+}
+
+@keyframes change_bg {
+0% {
+  background-position: 0 0;
+}
+20% {
+  background-position: 25% 25%;
+	}
+50% {
+  background-position: 50% 50%;
+  }
+100% {
+  background-position: 100% 100%;
+  }
+}
+
+@keyframes pulse  {
+  0% {
+    transform: translateX(3px);
+  }
+  20% {
+    transform: translateX(-3px);
+    }
+  30% {
+    transform: translateX(3px);
+  }
+  40% {
+    transform: translateX(-3px);
+    }
+  50% {
+    transform: translateX(0px);
+    }
+    70% {
+    transform: translateX(-1px);
+    }
+    80% {
+      transform: translateX(1px);
+    }
+  100% {
+    transform: translateX(0px);
+    color: lightcyan
+    }
+  }
+
+  .sprite {
+    background: url('../wtf.png');
+    height: 444px;
+    width: 327px;
+    animation: wtf 2s steps(10) infinite;
+  }
+
+  .sec_sprite {
+background: url(../dude.png);
+height: 100px;
+width: 73px;
+display: inline-block;
+animation: dude 2s steps(10) infinite;
+padding-bottom: 50px;
+  }
+
+  @keyframes dude {
+    to {
+  background-position: -736px;
+  }
+}
+
+  @keyframes wtf {
+    to {
+      background-position: -3270px;
+    }
+  }
 
 .social_ul {
   display: flex;
-  /* transition: all 1s cubic-bezier(0,.05,1,.52); */
   width: 120px;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -279,6 +366,35 @@ transform: rotate(calc(3turn + 45deg));
 
 
 /* ----------------------------------------------------------------------> */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
